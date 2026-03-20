@@ -24,6 +24,12 @@
 </head>
 
 <body>
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    <!-- Floating Glows -->
+    <div class="float-glow float-glow-1"></div>
+    <div class="float-glow float-glow-2"></div>
+
     <!-- Loading Screen (Over-the-top Hospital Theme) -->
     <div class="loader-overlay" id="loaderOverlay">
         <div class="loader-wrapper">
@@ -61,6 +67,18 @@
         <div class="blob blob-3"></div>
     </div>
 
+    <!-- Announcement Ticker -->
+    <div class="ticker-bar">
+        <div class="ticker-content">
+            <span class="ticker-label"><i class="fas fa-bullhorn"></i>&nbsp;ประกาศ</span>
+            <div class="ticker-track">
+                <span>โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร &nbsp;•&nbsp; เปิดบริการ จันทร์–ศุกร์ เวลา 08.30 – 16.30 น.
+                    &nbsp;•&nbsp; ติดต่อสอบถามผ่านช่องทางออนไลน์ของเราได้เลย &nbsp;•&nbsp; ยินดีให้บริการทุกท่าน
+                    &nbsp;•&nbsp;</span>
+            </div>
+        </div>
+    </div>
+
     <main class="container">
         <header class="profile">
             <div class="profile-img-container">
@@ -68,12 +86,35 @@
             </div>
             <h1 class="profile-name">โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</h1>
             <p class="profile-bio">รวมเว็บไซต์และช่องทางติดต่อของโรงพยาบาลเรา</p>
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span> <span id="statusText">เปิดให้บริการออนไลน์</span>
+            </div>
         </header>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Stats -->
+        <section class="stats-row" aria-label="สถิติ">
+            <div class="stat-card">
+                <i class="fas fa-globe stat-icon"></i>
+                <div class="stat-label">เว็บไซต์</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-comments stat-icon"></i>
+                <div class="stat-label">ช่องทางติดต่อ</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-shield-heart stat-icon"></i>
+                <div class="stat-label">บริการด้วยหัวใจ</div>
+            </div>
+        </section>
 
         <section class="links-grid" aria-label="ลิงก์หลัก">
 
             <a href="https://kppmch-main.vercel.app/" class="link-card" id="link-official" target="_blank"
                 rel="noopener">
+                <span class="card-badge official-badge">Official</span>
                 <div class="link-icon"><i class="fas fa-hospital"></i></div>
                 <div class="link-text">
                     <span class="link-title">Official Website KPPmch</span>
@@ -84,6 +125,7 @@
 
             <a href="https://kppmch-pregnantt.vercel.app/" class="link-card" id="link-maternal" target="_blank"
                 rel="noopener">
+                <span class="card-badge official-badge">Official</span>
                 <div class="link-icon">
                     <i class="fas fa-person-breastfeeding"></i>
                 </div>
@@ -98,6 +140,7 @@
 
             <a href="https://telemedicine-kppmch.vercel.app/" class="link-card" id="link-telemedicine" target="_blank"
                 rel="noopener">
+                <span class="card-badge new-badge">ใหม่</span>
                 <div class="link-icon">
                     <i class="fas fa-hospital-user"></i>
                 </div>
